@@ -1,0 +1,336 @@
+@import 'lib/vars';
+@import 'lib/mixins';
+@import 'lib/reboot';
+@import 'lib/fontawesome/font-awesome';
+@import 'lib/fontface';
+@import 'lib/keyframes';
+
+
+
+//*{border: 0.3px solid white;}
+
+
+//Quitar la barra de scroll
+
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 0;
+}
+
+body {
+  background-color: #e601e6;
+  color: white;
+  position: fixed;
+}
+
+
+
+//HEADER
+
+header{
+ 
+  background-color: #282528;
+  //z-index: 1;
+}
+
+.top{
+  margin-top: 5px;
+  padding-bottom: 5px;
+  display: grid;
+  grid-template-columns: 7% 75% 7% 1fr 1fr;
+  align-items: center;
+  border-bottom: 4px solid #00F9FF;
+}
+
+.logo{
+  width: 100%;
+  padding-left: 7%;
+}
+
+
+
+//SEARCHBOX
+
+.searchbox{
+  padding-left: 2%;
+  justify-content: space-between;
+ 
+}
+
+.caja{
+  border-radius: 2px;
+  padding: 6px;
+  font-size: 0.9rem;
+  color: #666466;
+}
+
+.box{
+  background-color: #282528;
+  border: 0;
+  width: 96%;
+  outline: 0;
+  color:white;
+  font-size: 0.9rem;
+}
+
+.fa-search{
+  color: #666466;
+  justify-content: space-between;
+}
+
+.sign_up{
+  font-size: 0.8rem;
+  padding-left: 20%;
+}
+
+.sign_in{
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #282528;
+  background-color: white;
+  border-radius: 2px;
+  padding-left: 20%;
+}
+
+.fa-ellipsis-h{
+  display: flex;
+  justify-content: center;
+  padding-right: 7%;
+}
+
+
+
+//BANNER
+
+.artbio__imag{
+  width: 100%;
+}
+
+.artbio{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+    
+}
+
+.imag__profile{
+  width: 5em; 
+  position: absolute;
+  top: 25%;
+  left: 48%;
+  border-radius: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.tyler{
+  position: absolute;
+  top: 58%;
+  left: 46.5%;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.artbio__descrip{
+  position: absolute;
+  top: 70%;
+  left: 42%;
+  display: flex;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.artbio__location{
+  position: absolute;
+  top: 80%;
+  left: 44%;
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  
+}
+
+.fa-map-marker{
+  padding-top: 4px;
+  padding-right: 4px;
+  font-size: 0.8rem;
+}
+
+
+
+//NAVEGADOR
+
+.navegador{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  list-style-type: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+ 
+  
+}
+
+.navegador__element{
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+
+
+
+//GALERÍA
+
+.galeria{
+  
+  width: 100%;
+  height: 850px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  overflow: auto;
+
+  
+}
+
+.galeria::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 0;
+}
+
+.contenedor{
+  width: 100%;
+  height: 300px;
+  cursor:pointer;
+  
+}
+
+.images{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+//INTERACTIVIDAD
+
+  //VENTANA MODAL IMÁGENES
+
+.content{
+  
+  display: grid;
+  grid-template-columns: 67% 1fr;
+  position: fixed;
+  background-color: #282528;
+  width: 100vw;
+  z-index: 1;
+  float: top;
+}
+
+.imagebig{
+  cursor: pointer;
+}
+
+.no__visible{
+  visibility: hidden;
+}
+
+.imagebig{
+  width: 100%;
+  height: 100%;
+}
+
+.img__big{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fa-times{
+  padding-top: 13px;;
+  padding-left: 92%;
+  cursor: pointer;
+}
+
+.icons{
+  display: flex;
+  align-items: flex-end;
+}
+
+.profile__tyler{
+  display: flex;
+  justify-content: center;
+}
+
+.texto{
+  font-size: 0.9rem;
+  padding-top: 90px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #666466;
+}
+
+
+
+  //BÚSQUEDA
+
+.searchbox__hidden{
+  position: absolute;
+  width: 74%;
+  background-color: #282528;
+  top: 30px;
+  z-index: 1;
+  position: fixed;
+  left: 130px;
+  color: #666466;
+  cursor: pointer;
+  padding-left: 10px;
+  border-bottom: 4px solid #00F9FF;
+  font-size: 0.9rem;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+
+
+  //CORAZÓN DOBLE CLICK
+
+.corazon__img{
+  position: absolute;
+  position: fixed;
+  z-index: 2;
+  top: 260px;
+  left: 500px;
+}
+
+.hidd{
+  visibility: hidden;
+}
+
+.corazon__contenedor{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.corazonlinea__contenedor{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-heart{
+  font-size: 4rem;
+  text-shadow: 0px 0px 16px rgba(0,0,0,0.69);
+}
